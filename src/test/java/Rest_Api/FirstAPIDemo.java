@@ -1,5 +1,6 @@
 package Rest_Api;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -19,6 +20,11 @@ public class FirstAPIDemo {
 		System.out.println(responce.getBody().asString());
 		System.out.println(responce.getHeader("content-type"));
 		System.out.println(responce.getStatusLine());
+		int statuscode=responce.getStatusCode();
+		//Assert.assertEquals(statuscode, 200);
+		
+		Assert.assertEquals(statuscode, 200);
+		
 		
 	}
 }
