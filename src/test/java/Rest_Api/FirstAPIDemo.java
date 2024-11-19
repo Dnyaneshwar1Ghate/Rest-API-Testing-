@@ -11,7 +11,7 @@ public class FirstAPIDemo {
 
 	ValidatableResponse val;
 	@Test
-	void firstDemoForAPI() 
+	void firstDemoForAPI() throws InterruptedException 
 	{
 		
 		Response responce= RestAssured.get("https://reqres.in/api/users?page=2");
@@ -24,6 +24,10 @@ public class FirstAPIDemo {
 		//Assert.assertEquals(statuscode, 200);
 		
 		Assert.assertEquals(statuscode, 200);
+		
+		
+		Thread.sleep(3000);
+		
 		
 		
 	}
